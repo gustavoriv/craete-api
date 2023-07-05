@@ -5,6 +5,9 @@ import {
   eliminarReserva,
   updateReservas,
   infrome,
+  pendienteReservas,
+  anularReservas,
+  
 } from "../controllers/reservas.controller.js";
 
 const router = Router();
@@ -19,6 +22,15 @@ router.post("/informe", infrome)
 
 //update
 router.put("/update", updateReservas);
+
+// rutas de reservas
+router.delete("/eliminar", eliminarReserva);
+//update
+router.put("/update", updateReservas);
+// anular reservas
+router.put("/anular", anularReservas);
+
+router.put("/pendiente", pendienteReservas);
 
 
 
