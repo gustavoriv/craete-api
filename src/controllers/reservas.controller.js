@@ -27,38 +27,10 @@ export const crearReservas = async (req, res) => {
   }
 };
 
-export const eliminarReserva = async (req, res) => {
-  try {
-    const { id } = req.body; //el body req es lo que obtenemos del cliente osea los datos que se envian
 
-    const [rows] = await pool.query(
-      "DELETE FROM Reservas WHERE id_reserva=?", //creamos el script para cargar los datos
-      [id]
-    );
-    res.status(201).json({ id }); //Enviamos el estado al cliente
-  } catch (error) {
-    return res.status(500).json({ message: "Dato Elimminado" });
-  }
-};
 
-//actualizar
 
-export const updateReservas = async (req, res) => {
-  try {
-    const { alumno, fecha, estado, id } = req.body; //el body req es lo que obtenemos del cliente osea los datos que se envian
-    //console.log("update", alumno, fecha, estado, id);
 
-    let otraf = fecha;
-    console.log("otra fecga", otraf);
-
-    const [rows] = await pool.query(
-      `UPDATE Reservas SET Alumno="${alumno}",Fecha="${fecha}",Estado="${estado}" WHERE id_reserva="${id}"; ` //creamos el script para cargar los datos
-    );
-    res.status(201).json({ alumno, fecha, estado, id }); //Enviamos el estado al cliente
-  } catch (error) {
-    return res.status(500).json({ message: "error al tratar de actualizar" });
-  }
-};
 
 export const infrome = async (req, res) => {
   try {
