@@ -17,7 +17,7 @@ router.get("/reservas/:id", getReservas);
 
 router.post("/ingresar", crearReservas); //Roteo de los metodo -> dicho metodo llama a una funcion
 
-router.delete("/ingresar", eliminarReserva)
+
 router.post("/informe", infrome)
 
 //update
