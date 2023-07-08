@@ -10,6 +10,9 @@ import {
   
 } from "../controllers/reservas.controller.js";
 
+import {getlisreservas} from "../controllers/lisreservas.controller.js"
+
+
 const router = Router();
 
 // GET todas las reservas
@@ -31,6 +34,8 @@ router.put("/update", updateReservas);
 router.put("/anular", anularReservas);
 
 router.put("/pendiente", pendienteReservas);
+/// pablo
+router.get("/lisreserva", getlisreservas);
 
 
 
