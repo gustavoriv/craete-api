@@ -6,7 +6,7 @@ import {getSolicitudes,updateReservas,anularReservas,pendienteReservas} from '..
 
 const router=Router();
 
-router.get("/solicidutes", getSolicitudes)
+router.get("/solicitudes", getSolicitudes)
 
 //update
 router.put("/update", updateReservas);
