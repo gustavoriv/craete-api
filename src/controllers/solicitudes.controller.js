@@ -1,4 +1,8 @@
 import { pool } from "../db.js";
+export const index = (req, res) =>{
+  res.json({ message: "Api de prueba para la biblioteca" });
+}
+
 
 export const getSolicitudes = async (req, res) => {
     const [result] = await pool.query("SELECT * from reservas");
@@ -6,7 +10,7 @@ export const getSolicitudes = async (req, res) => {
   };
 
 // controlador eliminar
-  export const eliminarReserva = async (req, res) => {
+  export const ElimiReserva = async (req, res) => {
     try {
       const {id} = req.body; //el body req es lo que obtenemos del cliente osea los datos que se envian
      
