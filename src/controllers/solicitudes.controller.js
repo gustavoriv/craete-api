@@ -14,7 +14,7 @@ export const getSolicitudes = async (req, res) => {
   export const ConsulReserva = async (req, res) => {
   const {q}=req.body;
     const [result] = await pool.query("SELECT * from reservas where res_nombre=?",[q]);
-    res.json(result);
+    res.json(q);
   };
 
 
