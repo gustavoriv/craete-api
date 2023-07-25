@@ -1,6 +1,6 @@
 import { Router } from "express";
 // importacion de los controladores
-import {updateReservas,anularReservas,pendienteReservas,ElimiReserva,getSolicitudes} from '../controllers/solicitudes.controller.js'
+import {updateReservas,anularReservas,pendienteReservas,ElimiReserva,getSolicitudes,ConsulReserva} from '../controllers/solicitudes.controller.js'
 
 const router=Router();
 
@@ -14,5 +14,7 @@ router.put("/anular", anularReservas);
 router.put("/pendiente", pendienteReservas);
 
 router.delete("/eliminar", ElimiReserva);
+
+router.delete("/consulta/:q", ConsulReserva);
 
 export default router;

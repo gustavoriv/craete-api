@@ -7,6 +7,17 @@ export const getSolicitudes = async (req, res) => {
     res.json(result);
   };
 
+
+
+
+
+  export const ConsulReserva = async (req, res) => {
+  const {q}=req.body;
+    const [result] = await pool.query("SELECT * from reservas where res_nombre=?",[q]);
+    res.json(result);
+  };
+
+
 // controlador eliminar
   export const ElimiReserva = async (req, res) => {
     try {
