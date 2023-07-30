@@ -4,6 +4,7 @@ import cors from "cors";
 import bibliotecaPoint from "./routes/reservas.routes.js";
 import indexRoutes from "./routes/index.routes.js";
 import solicitudPoint from "./routes/solicitudes.routes.js"
+import usuariosPoint from "./routes/usuarios.routes.js"
 const app = express();
 // Middlewares
 app.use(morgan("dev"));
@@ -13,7 +14,7 @@ app.use(cors());
 app.use("/", indexRoutes);
 app.use("/api", bibliotecaPoint);
 app.use("/soli", solicitudPoint);
-
+app.use("usuarios",usuariosPoint);
 app.use((req, res, next) => {
   res.status(404).json({ message: "No enontrado" });
 });
