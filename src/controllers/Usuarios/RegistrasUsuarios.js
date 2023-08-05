@@ -1,16 +1,12 @@
-import { pool } from "../db.js"; //conexion  a la base de datos
+import { pool } from ".././../db.js"; //conexion  a la base de datos
 //import { pool } from "../../db.js";
 export const getUsuarios = async (req, res) => {
   console.log(req.params.id);
 
-  try {
-    const [rows] = await pool.query(
-      `SELECT * from usuarios where id_usuarios like '%${req.params.id}%' `
-    );
-    res.json(rows);
-  } catch (error) {
-    return res.status(500).json({ message: "Error" });
-  }
+  
+    const [result] = await pool.query("SELECT * from usuarios");
+    res.json(result);
+
 };
 /*
 export const agregaUsuarios = async (req, res) => {
