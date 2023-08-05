@@ -7,7 +7,7 @@ const router=Router();
 router.get("/Usuarios", getUsuarios)
 
 //update
-router.put("/update", updateReservas);
+//router.put("/update", updateReservas);
 // anular reservas
 //router.put("/anular", anularReservas);
 
